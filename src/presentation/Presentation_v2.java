@@ -1,10 +1,9 @@
-package metier;
+package presentation;
 
 import dao.IDao;
+import metier.IMetier;
 
 import java.io.File;
-import java.io.FileNotFoundException;
-import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.util.Scanner;
 
@@ -12,6 +11,9 @@ public class Presentation_v2 {
 
     public static void main(String[] args) {
         try {
+
+            /* Read the Config.txt file */
+
             Scanner scanner = new Scanner(new File("src/config.txt"));
             String daoClassName = scanner.nextLine();
 //            System.out.println(daoClassName);
@@ -23,13 +25,18 @@ public class Presentation_v2 {
             Class cMetier = Class.forName(metierClassName);
             IMetier metier = (IMetier) cMetier.newInstance();
 
+
+            /* Dynamic Injection */
+
             Method m = cMetier.getMethod("setDao", IDao.class);
             m.invoke(metier, dao);
-            
+
+            System.out.println("**** Dependencies Injections (DI) ****");
+            System.out.println("Dynamic Injection : ");
             System.out.println(metier.calcule());
 
 
-        } catch (FileNotFoundException | ClassNotFoundException | InstantiationException | IllegalAccessException | NoSuchMethodException | InvocationTargetException e) {
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
