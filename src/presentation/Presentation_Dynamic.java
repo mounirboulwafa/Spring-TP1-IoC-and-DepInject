@@ -7,7 +7,7 @@ import java.io.File;
 import java.lang.reflect.Method;
 import java.util.Scanner;
 
-public class Presentation_v2 {
+public class Presentation_Dynamic {
 
     public static void main(String[] args) {
         try {

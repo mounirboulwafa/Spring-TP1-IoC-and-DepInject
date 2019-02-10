@@ -3,7 +3,7 @@ package presentation;
 import dao.DaoImp;
 import metier.MetierImp;
 
-public class Presentation {
+public class Presentation_Static {
     public static void main(String[] args) {
         DaoImp dao = new DaoImp();
         MetierImp metier = new MetierImp();
