@@ -13,7 +13,7 @@ public class Presentation {
 
         System.out.println("**** Dependencies Injections (DI) ****");
         System.out.println("Static Injection : ");
-        System.out.println(metier.calcule());
+        System.out.println(metier.calcul());
 
     }
 }

@@ -4,7 +4,7 @@ import metier.IMetier;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-public class Presentation_Spring {
+public class Presentation_SpringXML {
 
     public static void main(String[] args) {
         /* Read the config.xlm file */
@@ -13,8 +13,8 @@ public class Presentation_Spring {
         IMetier metier = (IMetier) springContext.getBean("metier");
 
         System.out.println("**** Dependencies Injections (DI) ****");
-        System.out.println("Spring IoC Injection w xml file : ");
-        System.out.println(metier.calcule());
+        System.out.println("Spring IoC Injection using xml file : ");
+        System.out.println(metier.calcul());
 
     }
 

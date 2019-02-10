@@ -1,5 +1,10 @@
 package dao;
 
+import org.springframework.context.annotation.Primary;
+import org.springframework.stereotype.Repository;
+
+@Repository
+@Primary
 public class DaoImp_v2 implements IDao {
 
     @Override

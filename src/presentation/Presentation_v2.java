@@ -33,7 +33,7 @@ public class Presentation_v2 {
 
             System.out.println("**** Dependencies Injections (DI) ****");
             System.out.println("Dynamic Injection : ");
-            System.out.println(metier.calcule());
+            System.out.println(metier.calcul());
 
 
         } catch (Exception e) {
